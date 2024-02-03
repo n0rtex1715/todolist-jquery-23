@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Планировщик задач</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark border-info border-bottom border-3">
+    <div class="container-fluid">
+        <a class="navbar-brand bi-card-checklist link-light" href="#">
+             JQuery - Список дел
+        </a>
+    </div>
+</nav>
+
+<div class="container-fluid" style="width: 33%; min-width: 300px;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group mb-3 mt-4">
+                <input type="text" class="form-control" id="taskInput" placeholder="Введите название задачи">
+                <button class="btn btn-primary" id="addTaskBtn"><i class="bi bi-plus-circle"></i></button>
+                <div class="input-group-append">
+                    <label class="input-group-text" for="statusFilter"><b class="bi bi-funnel-fill">  Фильтр</b> </label>
+                    <select class="form-select" id="statusFilter">  
+                        <option value="all">Все</option>
+                        <option value="active">Активные</option>
+                        <option value="completed">Выполненные</option>
+                        <option value="trash">Корзина</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="list-group" id="taskList"></ul>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
